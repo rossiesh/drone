@@ -862,3 +862,17 @@ C:/Users/rossh/drone/esp32/build/esp-idf/main/CMakeFiles/list_install_components
 C:/Users/rossh/drone/esp32/build/esp-idf/main/CMakeFiles/install.dir
 C:/Users/rossh/drone/esp32/build/esp-idf/main/CMakeFiles/install/local.dir
 C:/Users/rossh/drone/esp32/build/esp-idf/main/CMakeFiles/install/strip.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/__idf_websocket.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/edit_cache.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/rebuild_cache.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/list_install_components.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/install.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/install/local.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/CMakeFiles/install/strip.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/__idf_wifi.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/edit_cache.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/rebuild_cache.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/list_install_components.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/install.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/install/local.dir
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/CMakeFiles/install/strip.dir

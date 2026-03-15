@@ -160,3 +160,5 @@ $<TARGET_FILE:idf::usb>
 $<TARGET_FILE:idf::wifi_provisioning>
 $<TARGET_FILE:__idf_json>
 $<TARGET_FILE:idf::main>
+$<TARGET_FILE:idf::websocket>
+$<TARGET_FILE:idf::wifi>

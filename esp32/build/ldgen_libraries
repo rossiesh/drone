@@ -160,3 +160,5 @@ C:/Users/rossh/drone/esp32/build/esp-idf/usb/libusb.a
 C:/Users/rossh/drone/esp32/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 C:/Users/rossh/drone/esp32/build/esp-idf/json/libjson.a
 C:/Users/rossh/drone/esp32/build/esp-idf/main/libmain.a
+C:/Users/rossh/drone/esp32/build/esp-idf/websocket/libwebsocket.a
+C:/Users/rossh/drone/esp32/build/esp-idf/wifi/libwifi.a
