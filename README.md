@@ -1,7 +1,7 @@
 <h1>materials</h1>
 <ul>
-  <li>flight controller: XIAO ESP32 S3</li>
-  <li>controller: another XIAO ESP32 S3</li>
+  <li>flight controller (FC): XIAO ESP32 S3</li>
+  <li>controller: XIAO ESP32 S3</li>
   <li>IMU: MPU6500</li>
   <li>barometer: MS5611</li>
   <li>ESC: Sequre Blueson A2 (comes with power cables, XT60 connector and capacitor)</li>
