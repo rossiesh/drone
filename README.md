@@ -1,6 +1,7 @@
 <h1>materials</h1>
 <ul>
   <li>flight controller: XIAO ESP32 S3</li>
+  <li>controller: another XIAO ESP32 S3</li>
   <li>IMU: MPU6500</li>
   <li>barometer: MS5611</li>
   <li>ESC: Sequre Blueson A2 (comes with power cables, XT60 connector and capacitor)</li>
@@ -8,7 +9,7 @@
   <li>props: iFlight Nazgul F5
   <li>battery: Goldbat 4s 1500mAh Lipo</li>
   <li>generic DC-DC 3A adjustable buck converter</li>
-  <li>2.4GHz rod antenna (2.81dBi) for Seeed Studio XIAO</li>
+  <li>2.4GHz rod antenna (2.81dBi) for Seeed Studio XIAO x2</li>
   <li>M3 screw set with nuts and screwdriver/ratchet wrench</li>
   <li>M3 silicon shock absorber rings</li>
   <li>3D printer for the frame (Elegoo Neptune 4) and white&black Elegoo Pla+</li>
@@ -23,7 +24,7 @@
   <li>high AWG cables</li>
 </ul>
 
-<h1>wiring of ESP32</h1>
+<h1>wiring of ESP32 (FC)</h1>
 
 <ul>
   <li>GPIO1-GPIO4 -> motor 1-4 connection with the ESC</li>
