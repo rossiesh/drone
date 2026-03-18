@@ -2,11 +2,9 @@
 #include "esp_err.h"
 #include "esp_log.h"
 #include "esp_now.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
 #include <cstring>
 
-static uint8_t mac_address_fc[ESP_NOW_ETH_ALEN] = {0x10, 0x20, 0xBA, 0x03, 0xBB, 0x80};
+static uint8_t mac_address_controller[ESP_NOW_ETH_ALEN] = {0x10, 0x20, 0xBA, 0x03, 0xBF, 0x28};
 static const char *TAG = "espnow";
 
 void espnow_send_cb(const esp_now_send_info_t *tx_info, esp_now_send_status_t status)
@@ -28,19 +26,13 @@ esp_err_t espnow_init(void)
     peer.channel = 1;
     peer.encrypt = false;
     peer.ifidx = WIFI_IF_STA;
-    std::memcpy(peer.peer_addr, mac_address_fc, ESP_NOW_ETH_ALEN);
+    std::memcpy(peer.peer_addr, mac_address_controller, ESP_NOW_ETH_ALEN);
     ESP_ERROR_CHECK(esp_now_add_peer(&peer));
     esp_now_rate_config_t rate_config = {};
     rate_config.phymode = WIFI_PHY_MODE_LR;
     rate_config.rate = WIFI_PHY_RATE_LORA_250K;
     rate_config.ersu = false;
     rate_config.dcm = false;
-    ESP_ERROR_CHECK(esp_now_set_peer_rate_config(mac_address_fc, &rate_config));
-    return ESP_OK;
-}
-
-esp_err_t espnow_send_data(const uint8_t *data, size_t len)
-{
-    ESP_ERROR_CHECK(esp_now_send(mac_address_fc, data, len));
+    ESP_ERROR_CHECK(esp_now_set_peer_rate_config(mac_address_controller, &rate_config));
     return ESP_OK;
 }
