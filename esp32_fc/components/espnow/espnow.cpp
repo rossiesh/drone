@@ -6,6 +6,7 @@
 
 static uint8_t mac_address_controller[ESP_NOW_ETH_ALEN] = {0x10, 0x20, 0xBA, 0x03, 0xBF, 0x28};
 static const char *TAG = "espnow";
+int count = 1;
 
 void espnow_send_cb(const esp_now_send_info_t *tx_info, esp_now_send_status_t status)
 {
@@ -14,7 +15,8 @@ void espnow_send_cb(const esp_now_send_info_t *tx_info, esp_now_send_status_t st
 
 void espnow_recv_cb(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len)
 {
-    ESP_LOGI(TAG, "%s", "received");
+    ESP_LOGI(TAG, "[%d] %s", count, "received");
+    count++;
 }
 
 esp_err_t espnow_init(void)
