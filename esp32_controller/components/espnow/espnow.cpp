@@ -11,7 +11,12 @@ static const char *TAG = "espnow";
 
 void espnow_send_cb(const esp_now_send_info_t *tx_info, esp_now_send_status_t status)
 {
-    ESP_LOGI(TAG, "%s", "sent");
+    uint8_t *mac = tx_info->des_addr;
+    ESP_LOGI(
+        TAG,
+        "sent to %02X:%02X:%02X:%02X:%02X:%02X, %s",
+        mac[0], mac[1], mac[2], mac[3], mac[4], mac[5],
+        status == ESP_NOW_SEND_SUCCESS ? "success" : "fail");
 }
 
 void espnow_recv_cb(const esp_now_recv_info_t *recv_info, const uint8_t *data, int len)
