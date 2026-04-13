@@ -1,3 +1,5 @@
+#include "control_packet.h"
+#include "telemetry_packet.h"
 #include "espnow.h"
 #include "esp_err.h"
 #include "esp_log.h"
