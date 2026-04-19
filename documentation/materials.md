@@ -15,7 +15,6 @@
       <li>12x M3x16 with flats</li>
       <li>6x M3x30</li>
       <li>12x locks</li>
-      <li>
     </ul>
   </li>
   <li>M3 silicon shock absorber rings <em>(~3€)</em>, you need 18 rings</li>
