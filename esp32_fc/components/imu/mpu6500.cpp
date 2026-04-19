@@ -10,8 +10,10 @@
 
 static spi_device_handle_t imu_handle;
 static const char *TAG = "mpu6500";
+static const uint8_t start_register = 0x3B;
+static const uint8_t raw_data_length = 14;
 
-esp_err_t read_register(uint8_t reg, uint8_t &value)
+/* esp_err_t read_register(uint8_t reg, uint8_t &value)
 {
   uint8_t tx_buffer[2] = {static_cast<uint8_t>(reg | 0x80), 0x00};
   uint8_t rx_buffer[2] = {0};
@@ -24,6 +26,44 @@ esp_err_t read_register(uint8_t reg, uint8_t &value)
   ESP_ERROR_CHECK(spi_device_polling_transmit(imu_handle, &transaction));
 
   value = rx_buffer[1];
+  return ESP_OK;
+} */
+
+esp_err_t read_bytes(uint8_t start_register, uint8_t *buffer, size_t length)
+{
+  uint8_t tx_buffer[length + 1] = {0};
+  uint8_t rx_buffer[length + 1] = {0};
+  tx_buffer[0] = start_register | 0x80;
+  spi_transaction_t transaction = {0};
+  transaction.length = (length + 1) * 8;
+  transaction.tx_buffer = tx_buffer;
+  transaction.rx_buffer = rx_buffer;
+  ESP_ERROR_CHECK(spi_device_polling_transmit(imu_handle, &transaction));
+  for (int i; i < length; i++)
+  {
+    buffer[i] = rx_buffer[i + 1];
+  }
+  return ESP_OK;
+}
+
+esp_err_t mpu6500_read_raw_data(ImuRawData &data)
+{
+  uint8_t tx_buffer[raw_data_length] = {0};
+  uint8_t rx_buffer[raw_data_length] = {0};
+  tx_buffer[0] = start_register | 0x80;
+  spi_transaction_t transaction = {0};
+  transaction.length = (raw_data_length + 1) * 8;
+  transaction.tx_buffer = tx_buffer;
+  transaction.rx_buffer = rx_buffer;
+  ESP_ERROR_CHECK(spi_device_polling_transmit(imu_handle, &transaction));
+  data.a_x = (rx_buffer[1] << 8) | rx_buffer[2];
+  data.a_y = (rx_buffer[3] << 8) | rx_buffer[4];
+  data.a_z = (rx_buffer[5] << 8) | rx_buffer[6];
+  data.temp = (rx_buffer[7] << 8) | rx_buffer[8];
+  data.g_x = (rx_buffer[9] << 8) | rx_buffer[10];
+  data.g_y = (rx_buffer[11] << 8) | rx_buffer[12];
+  data.g_z = (rx_buffer[13] << 8) | rx_buffer[14];
+
   return ESP_OK;
 }
 
@@ -43,8 +83,8 @@ esp_err_t mpu6500_init(void)
   ESP_ERROR_CHECK(spi_bus_initialize(SPI2_HOST, &bus_config, SPI_DMA_CH_AUTO));
   ESP_ERROR_CHECK(spi_bus_add_device(SPI2_HOST, &device_config, &imu_handle));
 
-  uint8_t who_am_i = 0;
+  /* uint8_t who_am_i = 0;
   ESP_ERROR_CHECK(read_register(0x75, who_am_i));
-  ESP_LOGI(TAG, "0x%02X", who_am_i);
+  ESP_LOGI(TAG, "0x%02X", who_am_i); */
   return ESP_OK;
 }
