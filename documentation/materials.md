@@ -9,7 +9,7 @@
   <li>generic DC-DC 3A adjustable buck converter, e.g. MP1584EN <em>(~4€ for the five-pack)</em></li>
   <li>2.4GHz rod antenna (2.81dBi) for Seeed Studio XIAO <em>(~3€)</em></li>
   <li>
-    M3 screw set with nuts and screwdriver/ratchet wrench <em>(~8€ for the screw set), you need:</em>
+    M3 screw set with nuts and screwdriver/ratchet wrench <em>(~8€ for the screw set)</em>, you need:
     <ul>
       <li>24x M3x12 (16 with flats)</li>
       <li>12x M3x16 with flats</li>
