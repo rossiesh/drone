@@ -8,7 +8,7 @@
   <li>battery: e.g. Goldbat 4s 1500mAh LiPo <em>(~35€ for a two-pack)</em> (an additional LiPo charger is required)</li>
   <li>generic DC-DC 3A adjustable buck converter, e.g. MP1584EN <em>(~4€ for the five-pack)</em></li>
   <li>2.4GHz rod antenna (2.81dBi) for Seeed Studio XIAO <em>(~3€)</em></li>
-  <li>M3 screw set with nuts and screwdriver/ratchet wrench <em>(~8€ only for the screw set)</li>
+  <li>M3 screw set with nuts and screwdriver/ratchet wrench <em>(~8€ only for the screw set)</em></li>
   <li>M3 silicon shock absorber rings <em>(~3€)</em></li>
   <li>3D printer for the frame (Elegoo Neptune 4) <em>(~200€)</em> and white & black Elegoo Pla+ <em>(~20€ per spool)</em></li>
   <li>soldering equipment: 
