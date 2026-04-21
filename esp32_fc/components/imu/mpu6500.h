@@ -3,7 +3,7 @@
 #include "esp_err.h"
 #include "cstdint"
 
-struct ImuRawData
+struct ImuData
 {
     int16_t a_x;
     int16_t a_y;
@@ -15,4 +15,5 @@ struct ImuRawData
 };
 
 esp_err_t mpu6500_init(void);
-esp_err_t mpu6500_read_raw_data(ImuRawData &data);
+esp_err_t mpu6500_read_data(ImuData &imu_data);
+esp_err_t mpu6500_calibrate_gyro(void);
