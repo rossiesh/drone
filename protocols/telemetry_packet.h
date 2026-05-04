@@ -1,4 +1,6 @@
-#include "cstdint"
+#pragma once
+
+#include <cstdint>
 
 struct TelemetryPacket
 {
