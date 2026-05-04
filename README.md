@@ -16,7 +16,7 @@ The long-term goal is a custom drone system with:
 - ESP-NOW communication between handheld and flight controller
 - a custom flight control stack
 - an Android app connected to the handheld via USB-C for displaying telemetry data 
-- 3D-printed structural parts
+- 3D-printed drone parts
 
 ## Current state
 
@@ -25,7 +25,7 @@ The current implementation already covers some core building blocks:
 - ESP-NOW communication between handheld and flight controller is set up
 - the MPU6500 IMU is connected via SPI and can be read successfully
 - gyroscope calibration is implemented
-- 3D print resources and assembly-related documentation are included in the repository
+- 3D print resources
 
 The project is still missing major parts required for actual flight, for example:
 
