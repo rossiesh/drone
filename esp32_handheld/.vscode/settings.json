@@ -12,7 +12,7 @@
   "clangd.arguments": [
     "--background-index",
     "--query-driver=**",
-    "--compile-commands-dir=c:\\Users\\rossh\\drone\\esp32_controller\\build"
+    "--compile-commands-dir=c:\\Users\\rossh\\drone\\esp32_handheld\\build"
   ],
   "idf.flashType": "UART"
 }
