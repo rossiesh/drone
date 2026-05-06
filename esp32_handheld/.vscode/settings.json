@@ -1,5 +1,7 @@
 {
-  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.default.compileCommands": "C:\\Users\\rossh\\drone\\esp32_handheld\\build\\compile_commands.json",
   "idf.openOcdConfigs": [
     "board/esp32s3-builtin.cfg"
   ],
