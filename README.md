@@ -51,6 +51,13 @@ The project is still missing major parts required for actual flight, for example
 
 - [`tools/`](./tools/) helper tools
 
+## Development environment
+
+- VS Code
+- ESP-IDF extension 
+- ESP-IDF v6.0
+- target: esp32s3
+
 ## Documentation
 
 - [Materials](documentation/materials.md)
