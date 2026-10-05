@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "esp32_fc"
+		},
+		{
+			"path": "esp32_handheld"
+		},
+		{
+			"path": "protocols"
+		},
+		{
+			"path": "tools"
+		}
+	]
+}
